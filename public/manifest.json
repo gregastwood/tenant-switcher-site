@@ -1,0 +1,21 @@
+{
+  "name": "Tenant Switcher",
+  "short_name": "TenantSwitcher",
+  "description": "Manage Microsoft 365 tenants effortlessly. Switch between admin portals, mailboxes, and apps with one click.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563EB",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
