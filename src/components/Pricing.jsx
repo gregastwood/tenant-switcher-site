@@ -9,15 +9,10 @@ export default function Pricing() {
         </h2>
         <p className="text-gray-600 mb-8">
           Choose the plan that fits your workflow. All prices in NZD — cancel anytime.
-        </p>
-
-        {/* ✅ Free plan notice */}
-        <p className="text-gray-600 mb-8">
           A free version is available with support for a limited number of tenants —
           perfect for testing or light use. Upgrade to a paid plan to manage more
           tenants.
         </p>
-
         <div className="grid md:grid-cols-3 gap-10">
           {/* Solo Plan */}
           <div className="bg-gray-50 border border-gray-200 rounded-2xl shadow-sm hover:shadow-xl transition p-10 flex flex-col items-center">
