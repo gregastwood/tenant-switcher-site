@@ -8,7 +8,7 @@ export default function Pricing() {
           Simple, Transparent Pricing
         </h2>
         <p className="text-gray-600 mb-8">
-          Choose the plan that fits your workflow. All prices in NZD — cancel anytime.
+          Choose the plan that fits your workflow. All prices in NZD — cancel anytime.<br />
           A free version is available with support for a limited number of tenants —
           perfect for testing or light use. Upgrade to a paid plan to manage more
           tenants.
