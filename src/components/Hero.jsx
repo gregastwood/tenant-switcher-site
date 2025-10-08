@@ -40,8 +40,9 @@ export default function Hero() {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-3 mb-12">
           <a
-            href="#"
+            href="/public/tenant-switcher-installer.msi"
             className="bg-white text-blue-700 font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-blue-50 transition"
+            download
           >
             Download Tenant Switcher
           </a>
@@ -52,6 +53,7 @@ export default function Hero() {
             Buy Now
           </a>
         </div>
+
 
         {/* Why IT Pros Love It (merged in hero) */}
         <div className="max-w-6xl mx-auto mt-6 grid gap-6 md:grid-cols-3">
