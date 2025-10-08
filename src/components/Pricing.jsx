@@ -15,7 +15,7 @@ export default function Pricing() {
         <p className="text-gray-600 mb-8">
           A free version is available with support for a limited number of tenants —
           perfect for testing or light use. Upgrade to a paid plan to manage more
-          tenants and devices.
+          tenants.
         </p>
 
         <div className="grid md:grid-cols-3 gap-10">
