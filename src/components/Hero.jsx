@@ -40,7 +40,7 @@ export default function Hero() {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-3 mb-12">
           <a
-            href="/public/Tenant Switcher_1.0.0_x64_en-US.msi"
+            href="/downloads/Tenant Switcher_1.0.0_x64_en-US.msi"
             className="bg-white text-blue-700 font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-blue-50 transition"
             download
           >
