@@ -10,6 +10,13 @@ export default function Pricing() {
         <p className="text-gray-600 mb-16">
           Choose the plan that fits your workflow. All prices in NZD — cancel anytime.
         </p>
+        
+        {/* ✅ Free plan notice */}
+        <p className="text-gray-600 mb-8">
+          A free version is available with support for a limited number of tenants —
+          perfect for testing or light use. Upgrade to a paid plan to manage more
+          tenants and devices.
+        </p>
 
         <div className="grid md:grid-cols-3 gap-10">
           {/* Solo Plan */}
@@ -74,7 +81,7 @@ export default function Pricing() {
         </div>
 
         <p className="mt-16 text-gray-500 text-sm">
-            All prices in NZD and include GST where applicable.
+          All prices in NZD and include GST where applicable.
         </p>
       </div>
     </section>
