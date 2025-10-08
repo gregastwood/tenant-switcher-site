@@ -7,10 +7,10 @@ export default function Pricing() {
         <h2 className="text-4xl font-bold mb-6 text-gray-900">
           Simple, Transparent Pricing
         </h2>
-        <p className="text-gray-600 mb-16">
+        <p className="text-gray-600 mb-8">
           Choose the plan that fits your workflow. All prices in NZD — cancel anytime.
         </p>
-        
+
         {/* ✅ Free plan notice */}
         <p className="text-gray-600 mb-8">
           A free version is available with support for a limited number of tenants —
