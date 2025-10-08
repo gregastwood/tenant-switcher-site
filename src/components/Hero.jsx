@@ -54,6 +54,9 @@ export default function Hero() {
           </a>
         </div>
 
+        <p className="text-gray-600 mt-2 text-sm">
+          Fully functional app — free to use with a limit on the number of tenants.
+        </p>
 
         {/* Why IT Pros Love It (merged in hero) */}
         <div className="max-w-6xl mx-auto mt-6 grid gap-6 md:grid-cols-3">
