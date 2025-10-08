@@ -38,7 +38,7 @@ export default function Hero() {
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-3 mb-12">
+        <div className="flex flex-col sm:flex-row justify-center gap-3 mb-6">
           <a
             href="/downloads/Tenant Switcher_1.0.0_x64_en-US.msi"
             className="bg-white text-blue-700 font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-blue-50 transition"
