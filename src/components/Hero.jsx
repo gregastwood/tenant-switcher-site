@@ -10,12 +10,12 @@ export default function Hero() {
     {
       icon: "ph-browser",
       title: "Per-Tenant Profiles",
-      desc: "Keep logins isolated with custom browser profiles.",
+      desc: "Keep logins isolated with custom browser profiles for each tenant. Stay signed in to multiple clients at once, open admin portals instantly, and manage different Microsoft 365 accounts securely side by side.",
     },
     {
       icon: "ph-lock",
       title: "Secure Licensing",
-      desc: "Machine-bound license validation with Stripe billing.",
+      desc: "Machine-bound license validation with automated Stripe billing. Your license stays trusted even when offline, with a built-in grace period to prevent interruptions. Simple, secure, and transparent — designed for IT pros who need tools they can rely on.",
     },
   ];
 
