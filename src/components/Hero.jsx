@@ -5,7 +5,7 @@ export default function Hero() {
     {
       icon: "ph-arrows-left-right",
       title: "One-Click Switching",
-      desc: "Jump between tenants from your tray in seconds.",
+      desc: "Jump between Microsoft 365 tenants directly from your Windows tray in seconds. No more endless log-ins or browser juggling — Tenant Switcher keeps each session isolated and ready to go when you are.",
     },
     {
       icon: "ph-browser",
