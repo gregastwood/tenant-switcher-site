@@ -20,7 +20,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative text-center bg-gradient-to-b from-blue-600 to-blue-700 text-white px-6 pt-4 pb-20 sm:pt-8 sm:pb-24 overflow-hidden">
+    <section className="relative text-center bg-gradient-to-b from-blue-600 to-blue-700 text-white px-6 pt-2 pb-20 sm:pt-6 sm:pb-24 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Logo */}
         <img
