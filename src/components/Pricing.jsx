@@ -17,7 +17,7 @@ export default function Pricing() {
             <h3 className="text-2xl font-semibold text-gray-900 mb-2">Solo</h3>
             <p className="text-gray-500 mb-6">1 device • single user</p>
             <p className="text-5xl font-bold text-blue-700 mb-2">
-              NZ&nbsp;$12
+              NZ&nbsp;$15
               <span className="text-base font-normal text-gray-600">/month</span>
             </p>
             <p className="text-sm text-gray-500 mb-8">
@@ -36,7 +36,7 @@ export default function Pricing() {
             <h3 className="text-2xl font-semibold text-gray-900 mb-2">Team</h3>
             <p className="text-gray-500 mb-6">Up to 5 devices • shared license</p>
             <p className="text-5xl font-bold text-blue-700 mb-2">
-              NZ&nbsp;$10
+              NZ&nbsp;$12
               <span className="text-base font-normal text-gray-600">
                 /seat&nbsp;/month
               </span>
