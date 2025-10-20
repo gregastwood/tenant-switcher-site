@@ -10,20 +10,35 @@ export default function Success() {
   const params = new URLSearchParams(window.location.search);
   const sessionId = params.get("session_id");
 
+  // ⏳ Poll license until it appears
   useEffect(() => {
-    if (!sessionId) {
-      setError("Missing session ID");
-      setLoading(false);
-      return;
-    }
+    if (!session?.customer) return;
+    const interval = setInterval(async () => {
+      const res = await fetch(
+        `https://tenant-licensing-api.onrender.com/api/license-by-customer?customerId=${session.customer}`
+      );
+      if (res.ok) {
+        const data = await res.json();
+        if (data?.license_key) {
+          setLicense(data);
+          clearInterval(interval);
+        }
+      }
+    }, 5000); // retry every 5s
+    return () => clearInterval(interval);
+  }, [session]);
 
-    // 1️⃣ Fetch session details
+
+
+  useEffect(() => {
     fetch(`https://tenant-licensing-api.onrender.com/api/checkout-session?sessionId=${sessionId}`)
       .then((r) => {
         if (!r.ok) throw new Error(`Session fetch failed (${r.status})`);
         return r.json();
       })
       .then(async (data) => {
+        console.log("🔎 Checkout session:", data); // 👈 ADD THIS LINE
+
         setSession(data);
 
         // 2️⃣ Then fetch license by customer ID
@@ -47,6 +62,7 @@ export default function Success() {
         setLoading(false);
       });
   }, [sessionId]);
+
 
   if (loading) return <div className="p-8 text-center">Loading your order details...</div>;
   if (error)
@@ -81,10 +97,12 @@ export default function Success() {
           </p>
         </>
       ) : (
-        <p className="mt-6 text-gray-600">
-          🕓 License is being prepared. Please refresh this page in a few seconds.
+        <p className="mt-6 text-gray-600 animate-pulse">
+          🕓 Preparing your license... (this may take a few seconds)
         </p>
       )}
+
+
 
       <button
         onClick={() => (window.location.href = "/")}
