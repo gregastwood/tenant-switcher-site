@@ -15,7 +15,6 @@ export default function App() {
       <Navbar />
       <div className="pt-16">
         <Routes>
-          {/* Home page */}
           <Route
             path="/"
             element={
@@ -29,25 +28,8 @@ export default function App() {
               </>
             }
           />
-
-          {/* ✅ Success page for Stripe redirect */}
           <Route path="/success" element={<Success />} />
-
-          {/* (optional) Cancel page */}
-          <Route
-            path="/cancel"
-            element={
-              <section className="py-20 text-center">
-                <h1 className="text-4xl font-bold text-red-600 mb-4">
-                  Payment Canceled
-                </h1>
-                <p className="text-gray-600">
-                  Your payment was canceled or didn’t go through.<br />
-                  You can try again any time from the Pricing section.
-                </p>
-              </section>
-            }
-          />
+          <Route path="/cancel" element={<Cancel />} />
         </Routes>
       </div>
     </Router>
