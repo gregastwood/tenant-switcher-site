@@ -12,8 +12,10 @@ import Cancel from "./pages/Cancel";
 
 export default function App() {
   return (
-    <>
-      <Navbar />
+    <Router>
+      {/* ✅ Navbar always visible */}
+      <Navbar />  
+
       <div className="pt-16">
         <Routes>
           <Route
@@ -29,10 +31,12 @@ export default function App() {
               </>
             }
           />
+          {/* ✅ Navbar still active on these routes */}
           <Route path="/success" element={<Success />} />
           <Route path="/cancel" element={<Cancel />} />
         </Routes>
       </div>
-    </>
+    </Router>
   );
 }
+
