@@ -8,6 +8,16 @@ export default function Success() {
   const [session, setSession] = useState(null);
   const [error, setError] = useState();
 
+
+  useEffect(() => {
+    if (session?.customer) {
+      fetch(`https://tenant-licensing-api.onrender.com/api/license-by-customer?customerId=${session.customer.id}`)
+        .then(r => r.json())
+        .then(setLicense)
+    }
+  }, [session]);
+
+
   useEffect(() => {
     if (!sessionId) {
       setLoading(false);
@@ -41,6 +51,8 @@ export default function Success() {
       <p className="mb-4">Checkout session: <code>{sessionId}</code></p>
       <p className="mb-2">Subscription status: <strong>{session?.subscription?.status || session?.payment_status || "unknown"}</strong></p>
       <p className="text-sm text-gray-600">You’ll receive an email receipt from Stripe (test mode: no real charge).</p>
+      <p>Your new license key: <code>{license?.license_key}</code></p>
+
     </div>
   );
 }
