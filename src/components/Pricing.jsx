@@ -54,7 +54,7 @@ export default function Pricing() {
             </p>
 
             <button
-              onClick={() => handleCheckout("prod_TGeuJkmNufzNn0")}
+              onClick={() => handleCheckout("price_1SK7az1covk18sRaxgm6tE71")}
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg shadow-md transition"
             >
               Get Solo Plan
@@ -74,7 +74,7 @@ export default function Pricing() {
               Ideal for small teams or MSPs managing multiple clients.
             </p>
             <button
-              onClick={() => handleCheckout("prod_TGevPBmK2Ff9Hb")}
+              onClick={() => handleCheckout("price_1SK7bP1covk18sRaWzgEsYuP")}
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg shadow-md transition"
             >
               Get Team Plan
