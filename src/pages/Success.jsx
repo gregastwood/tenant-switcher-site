@@ -1,13 +1,18 @@
 // src/pages/Success.jsx (or /success in Next.js pages)
+
 import { useEffect, useState } from "react";
+
+const [license, setLicense] = useState(null);
+
 
 export default function Success() {
   const params = new URLSearchParams(window.location.search);
   const sessionId = params.get("session_id");
-  const [loading, setLoading] = useState(true);
+  // ✅ define state variables up front
   const [session, setSession] = useState(null);
-  const [error, setError] = useState();
-
+  const [license, setLicense] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (session?.customer) {
