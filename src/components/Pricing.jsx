@@ -93,8 +93,8 @@ export default function Pricing() {
           <p className="font-semibold mb-2">💡 Volume Discounts</p>
           <ul className="inline-block text-left">
             <li>• 1–4 seats — $15 / month</li>
-            <li>• 5–9 seats — $13 / month</li>
-            <li>• 10–20 seats — $12 / month</li>
+            <li>• 5–10 seats — $12 / month</li>
+            <li>• 11+ seats — $10 / month</li>
           </ul>
         </div>
 
