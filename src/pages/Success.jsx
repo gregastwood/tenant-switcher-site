@@ -6,11 +6,11 @@ export default function Success() {
   const [license, setLicense] = useState(null);
   const [error, setError] = useState(null);
 
-  // Extract session_id from the URL
+  // Extract session_id from URL
   const params = new URLSearchParams(window.location.search);
   const sessionId = params.get("session_id");
 
-  // ⏳ Poll license until it appears
+  // Poll until license appears
   useEffect(() => {
     if (!session?.customer) return;
     const interval = setInterval(async () => {
@@ -24,11 +24,9 @@ export default function Success() {
           clearInterval(interval);
         }
       }
-    }, 5000); // retry every 5s
+    }, 5000);
     return () => clearInterval(interval);
   }, [session]);
-
-
 
   useEffect(() => {
     fetch(`https://tenant-licensing-api.onrender.com/api/checkout-session?sessionId=${sessionId}`)
@@ -37,11 +35,9 @@ export default function Success() {
         return r.json();
       })
       .then(async (data) => {
-        console.log("🔎 Checkout session:", data); // 👈 ADD THIS LINE
-
+        console.log("🔎 Checkout session:", data);
         setSession(data);
 
-        // 2️⃣ Then fetch license by customer ID
         if (data.customer) {
           const licRes = await fetch(
             `https://tenant-licensing-api.onrender.com/api/license-by-customer?customerId=${data.customer}`
@@ -63,8 +59,8 @@ export default function Success() {
       });
   }, [sessionId]);
 
-
   if (loading) return <div className="p-8 text-center">Loading your order details...</div>;
+
   if (error)
     return (
       <div className="p-8 text-center text-red-600">
@@ -88,9 +84,21 @@ export default function Success() {
 
       {license ? (
         <>
-          <div className="mt-6 bg-gray-100 border rounded-lg p-4 inline-block">
-            <p className="text-lg font-semibold">Your License Key:</p>
-            <p className="text-2xl font-mono text-blue-600 select-all">{license.license_key}</p>
+          <div className="mt-6 bg-gray-100 border rounded-lg p-5 inline-block text-left">
+            <p className="text-lg font-semibold mb-2 text-center">Your License Details</p>
+            <p>
+              <strong>License Key:</strong>{" "}
+              <span className="font-mono text-blue-600 select-all">{license.license_key}</span>
+            </p>
+            <p>
+              <strong>Seats Purchased:</strong> {license.seat_quantity || 1}
+            </p>
+            {license.expires_at && (
+              <p>
+                <strong>Expires:</strong>{" "}
+                {new Date(license.expires_at).toLocaleDateString()}
+              </p>
+            )}
           </div>
           <p className="mt-2 text-sm text-gray-600">
             (Keep this safe — you’ll need it to activate Tenant Switcher)
@@ -101,8 +109,6 @@ export default function Success() {
           🕓 Preparing your license... (this may take a few seconds)
         </p>
       )}
-
-
 
       <button
         onClick={() => (window.location.href = "/")}
