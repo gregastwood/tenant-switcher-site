@@ -41,7 +41,7 @@ export default function Pricing() {
   }
 
   return (
-    <section id="pricing" className="py-24 bg-white text-center">
+    <section id="pricing" className="py-16 bg-white text-center">
       <div className="max-w-3xl mx-auto px-6">
         <h2 className="text-4xl font-bold mb-6 text-gray-900">Tenant Switcher License</h2>
         <p className="text-gray-600 mb-8">
