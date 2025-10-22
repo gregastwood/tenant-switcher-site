@@ -30,11 +30,12 @@ export default function Pricing() {
       if (data.url) {
         window.location.href = data.url;
       } else {
-        alert("Could not start checkout — please try again.");
+        // 🧹 SANITIZE: avoid revealing API responses
+        alert("⚠️ Unable to start checkout. Please try again shortly.");
       }
-    } catch (err) {
-      console.error("Checkout error:", err);
-      alert("Error connecting to payment system.");
+    } catch {
+      // 🧹 SANITIZE: remove raw error logging
+      alert("⚠️ We couldn’t reach the payment system. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -45,7 +46,7 @@ export default function Pricing() {
       <div className="max-w-3xl mx-auto px-6">
         <h2 className="text-4xl font-bold mb-6 text-gray-900">Tenant Switcher License</h2>
         <p className="text-gray-600 mb-8">
-          Simple, transparent pricing — cancel anytime.  
+          Simple, transparent pricing — cancel anytime.
           Volume discounts are automatically applied.
         </p>
 

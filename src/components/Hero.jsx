@@ -33,7 +33,8 @@ export default function Hero() {
         body: JSON.stringify({ fileName: "Tenant Switcher_1.0.0_x64_en-US.msi" }),
       });
     } catch (err) {
-      console.warn("⚠️ Download tracking failed:", err);
+      // 🧹 SANITIZE: don’t print network details in user browsers
+      console.warn("⚠️ Download tracking failed (non-critical).");
     }
 
     // ✅ Redirect to actual file after logging
