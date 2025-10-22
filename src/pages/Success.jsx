@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function Success() {
   const [loading, setLoading] = useState(true);
@@ -64,6 +65,13 @@ export default function Success() {
   if (error)
     return (
       <div className="p-8 text-center text-red-600">
+        <Helmet>
+          <title>Error — Tenant Switcher</title>
+          <meta
+            name="description"
+            content="There was a problem retrieving your Tenant Switcher license information."
+          />
+        </Helmet>
         <h2 className="text-2xl font-bold mb-4">⚠️ Error</h2>
         <p>{error}</p>
       </div>
@@ -71,6 +79,20 @@ export default function Success() {
 
   return (
     <div className="max-w-2xl mx-auto p-8 text-center">
+      <Helmet>
+        <title>Purchase Successful — Tenant Switcher</title>
+        <meta
+          name="description"
+          content="Your Tenant Switcher license purchase was successful. Retrieve your license key and installation details here."
+        />
+        <meta property="og:title" content="Tenant Switcher Purchase Successful" />
+        <meta
+          property="og:description"
+          content="Your Tenant Switcher license has been issued. Copy your license key to activate the app."
+        />
+        <meta property="og:url" content="https://tenant-switcher.com/success" />
+      </Helmet>
+
       <h1 className="text-3xl font-bold mb-4">✅ Thanks — your payment succeeded!</h1>
 
       <p className="mb-2">

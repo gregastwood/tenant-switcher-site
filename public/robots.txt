@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tenant-switcher.com/sitemap.xml
