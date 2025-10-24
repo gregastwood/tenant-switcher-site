@@ -73,7 +73,7 @@ export default function Hero() {
           </a>
         </div>
 
-        <p className="text-gray-600 mt-1 text-sm">
+        <p className="text-gray-700 mt-1 text-sm">
           The download includes the free version with support for a limited number of tenants — perfect for testing or light use.
         </p>
 

@@ -1,60 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Tenant Switcher — Effortless Microsoft 365 Tenant Management</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- 🔍 SEO Meta -->
-    <meta
-      name="description"
-      content="Switch between Microsoft 365 tenants instantly with Tenant Switcher for Windows and macOS. Secure licensing, simple setup, and admin-friendly design for IT professionals."
-    />
-    <meta
-      name="keywords"
-      content="Tenant Switcher, Microsoft 365, Office 365 admin tool, multi-tenant management, Azure AD, Entra, Microsoft 365 tenant login, desktop app for IT admins"
-    />
-    <meta name="author" content="Tenant Switcher" />
-    <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="https://tenant-switcher.com/" />
+  <title>Tenant Switcher — Effortless Microsoft 365 Tenant Management</title>
 
-    <!-- 🧱 Open Graph / Social -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tenant-switcher.com/" />
-    <meta
-      property="og:title"
-      content="Tenant Switcher — Effortless Microsoft 365 Tenant Management"
-    />
-    <meta
-      property="og:description"
-      content="Switch between Microsoft 365 tenants in one click. Manage multiple clients easily, with isolated browser sessions and secure licensing."
-    />
-    <meta property="og:image" content="https://tenant-switcher.com/og-image.jpg" />
+  <!-- 🔍 SEO Meta -->
+  <meta name="description"
+    content="Switch between Microsoft 365 tenants instantly with Tenant Switcher for Windows and macOS. Secure licensing, simple setup, and admin-friendly design for IT professionals." />
+  <meta name="keywords"
+    content="Tenant Switcher, Microsoft 365, Office 365 admin tool, multi-tenant management, Azure AD, Entra, Microsoft 365 tenant login, desktop app for IT admins" />
+  <meta name="author" content="Tenant Switcher" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://tenant-switcher.com/" />
 
-    <!-- 🐦 Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Tenant Switcher — Effortless Microsoft 365 Tenant Management"
-    />
-    <meta
-      name="twitter:description"
-      content="Switch between Microsoft 365 tenants in one click. Manage multiple clients easily, with isolated browser sessions and secure licensing."
-    />
-    <meta name="twitter:image" content="https://tenant-switcher.com/og-image.jpg" />
+  <!-- 🧱 Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tenant-switcher.com/" />
+  <meta property="og:title" content="Tenant Switcher — Effortless Microsoft 365 Tenant Management" />
+  <meta property="og:description"
+    content="Switch between Microsoft 365 tenants in one click. Manage multiple clients easily, with isolated browser sessions and secure licensing." />
+  <meta property="og:image" content="https://tenant-switcher.com/og-image.jpg" />
 
-    <!-- 📱 Icons & Theme -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
-    <meta name="theme-color" content="#2563eb" />
+  <!-- 🐦 Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tenant Switcher — Effortless Microsoft 365 Tenant Management" />
+  <meta name="twitter:description"
+    content="Switch between Microsoft 365 tenants in one click. Manage multiple clients easily, with isolated browser sessions and secure licensing." />
+  <meta name="twitter:image" content="https://tenant-switcher.com/og-image.jpg" />
 
-    <!-- ⚡ Performance -->
-    <link rel="preload" as="image" href="/hero-main.jpg" />
+  <!-- 📱 Icons & Theme -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-17x16.png">
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
+  <meta name="theme-color" content="#2563eb" />
 
-    <!-- 🧩 Structured Data -->
-    <script type="application/ld+json">
+  <!-- ⚡ Performance -->
+  <link rel="preload" as="image" href="/hero-main.jpg" />
+
+  <!-- 🧩 Structured Data -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -75,23 +65,24 @@
       }
     </script>
 
-    <!-- 📈 Google Analytics (replace G-XXXXXXX with your GA4 ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-XXXXXXX");
-    </script>
+  <!-- 📈 Google Analytics (replace G-XXXXXXX with your GA4 ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-XXXXXXX");
+  </script>
 
-    <!-- 🧭 Manifest -->
-    <link rel="manifest" href="/manifest.json" />
-  </head>
+  <!-- 🧭 Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+</head>
 
-  <body class="bg-gray-50 text-gray-900">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<body class="bg-gray-50 text-gray-900">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
