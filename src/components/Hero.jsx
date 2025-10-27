@@ -30,7 +30,7 @@ export default function Hero() {
       await fetch("https://tenant-licensing-api.onrender.com/api/download", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ fileName: "Tenant Switcher_1.0.0_x64_en-US.msi" }),
+        body: JSON.stringify({ fileName: "Tenant Switcher.msi" }),
       });
     } catch (err) {
       // 🧹 SANITIZE: don’t print network details in user browsers
@@ -38,7 +38,7 @@ export default function Hero() {
     }
 
     // ✅ Redirect to actual file after logging
-    window.location.href = "/downloads/Tenant Switcher_1.0.0_x64_en-US.msi";
+    window.location.href = "/downloads/Tenant Switcher.msi";
   };
 
   return (

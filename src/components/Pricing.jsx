@@ -93,14 +93,14 @@ export default function Pricing() {
         <div className="mt-12 text-gray-700 text-sm">
           <p className="font-semibold mb-2">💡 Volume Discounts</p>
           <ul className="inline-block text-left">
-            <li>• 1–4 seats — $15 / month</li>
-            <li>• 5–10 seats — $12 / month</li>
-            <li>• 11+ seats — $10 / month</li>
+            <li>• 1–4 seats — $7 USD / month</li>
+            <li>• 5–10 seats — $6 USD / month</li>
+            <li>• 11+ seats — $5 USD / month</li>
           </ul>
         </div>
 
         <p className="mt-16 text-gray-500 text-sm">
-          All prices in NZD and include GST where applicable.
+          All prices are in U.S. dollars (USD) and include GST where applicable.
         </p>
       </div>
     </section>
