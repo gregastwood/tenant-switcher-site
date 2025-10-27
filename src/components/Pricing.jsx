@@ -6,7 +6,7 @@ export default function Pricing() {
   const [loading, setLoading] = useState(false);
 
   // Replace with your live Stripe price ID
-  const PRICE_ID = "price_1SKyq61covk18sRa5ohEtvPO";
+  const PRICE_ID = "price_1SMxd41covk18sRaC0MChCpD";
 
   async function handleCheckout() {
     if (!email || !email.includes("@")) {
