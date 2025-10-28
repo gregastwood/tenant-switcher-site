@@ -118,12 +118,12 @@ export default function Success() {
             <p>
               <strong>Seats Purchased:</strong> {license.seat_quantity || 1}
             </p>
-            {license.expires_at && (
-              <p>
-                <strong>Expires:</strong>{" "}
-                {new Date(license.expires_at).toLocaleDateString()}
-              </p>
-            )}
+{/* {license.expires_at && (
+  <p>
+    <strong>Expires:</strong>{" "}
+    {new Date(license.expires_at).toLocaleDateString()}
+  </p>
+)} */}
           </div>
           <p className="mt-2 text-sm text-gray-600">
             (Keep this safe — you’ll need it to activate Tenant Switcher)
