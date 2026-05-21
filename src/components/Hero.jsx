@@ -5,17 +5,17 @@ export default function Hero() {
     {
       icon: "ph-arrows-left-right",
       title: "One-Click Switching",
-      desc: "Jump between Microsoft 365 tenants directly from your Windows tray in seconds. No more endless log-ins or browser juggling — Tenant Switcher keeps each session isolated and ready to go when you are.",
+      desc: "Switch between Microsoft 365 tenants instantly from your Windows tray — no repeated sign-ins or browser juggling.",
     },
     {
       icon: "ph-browser",
       title: "Per-Tenant Profiles",
-      desc: "Keep logins isolated with custom browser profiles for each tenant. Stay signed in to multiple clients at once, open admin portals instantly, and manage different Microsoft 365 accounts securely side by side.",
+      desc: "Keep each client session isolated with dedicated browser profiles, so you can stay signed in safely across multiple tenants.",
     },
     {
       icon: "ph-lock",
       title: "Secure Licensing",
-      desc: "Machine-bound license validation with automated Stripe billing. Your license stays trusted even when offline, with a built-in grace period to prevent interruptions. Simple, secure, and transparent — designed for IT pros who need tools they can rely on.",
+      desc: "Machine-bound licensing with Stripe billing and offline grace support, built for IT admins who need tools they can trust.",
     },
   ];
 
