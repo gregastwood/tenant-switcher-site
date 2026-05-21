@@ -12,8 +12,7 @@ export default function AppPreview() {
           Explore Tenant Switcher in Action
         </h2>
         <p className="text-gray-600 mb-10 max-w-2xl mx-auto">
-          A clean, unified dashboard for managing Microsoft 365 tenants —
-          simple, fast, and secure.
+          The Tenant Switcher dashboard gives MSPs and Microsoft 365 admins one place to manage client tenants, launch admin portals, and keep browser sessions separated by tenant.
         </p>
 
         <div className="flex justify-center">
