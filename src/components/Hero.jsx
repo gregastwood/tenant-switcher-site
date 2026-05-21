@@ -52,9 +52,9 @@ export default function Hero() {
         />
 
         {/* Title */}
-        <h1 className="text-3xl sm:text-5xl font-bold mb-1">Tenant Switcher</h1>
+        <h1 className="text-3xl sm:text-5xl font-bold mb-1">Microsoft 365 Tenant Switcher for MSPs and IT Admins</h1>
         <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-8">
-          Manage Microsoft 365 tenants effortlessly
+          Switch between Microsoft 365, Intune, Entra ID, Exchange, SharePoint, Teams and Azure tenants without browser profile chaos. Tenant Switcher keeps client sessions organised, isolated and ready from your Windows tray.
         </p>
 
         {/* ✅ MOD: Download button now calls handler */}
