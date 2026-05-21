@@ -21,7 +21,7 @@ export default function AppPreview() {
             alt="Tenant Switcher App Preview"
             className="rounded-2xl shadow-2xl border border-gray-200 object-contain"
             style={{
-              maxHeight: "70vh", // 👈 keeps image fully visible on most screens
+              maxHeight: "60vh", // 👈 keeps image fully visible on most screens
               width: "auto",
             }}
           />
