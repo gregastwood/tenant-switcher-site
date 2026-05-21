@@ -82,17 +82,22 @@ export default function Hero() {
         </p>
 
         {/* Why IT Pros Love It */}
-        <div
-          key={i}
-          className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-5 py-4 hover:scale-105 hover:shadow-xl transition"
-        >
-          <i className={`ph ${f.icon} text-3xl text-white`} />
-          <h3 className="mt-2 text-lg font-semibold text-white">{f.title}</h3>
-          <p className="mt-1 text-blue-100 text-sm">{f.desc}</p>
+        <div className="max-w-6xl mx-auto mt-6 grid gap-6 md:grid-cols-3">
+          {features.map((f, i) => (
+            <div
+              key={i}
+              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-5 py-4 hover:scale-105 hover:shadow-xl transition"
+            >
+              <i className={`ph ${f.icon} text-3xl text-white`} />
+              <h3 className="mt-2 text-lg font-semibold text-white">{f.title}</h3>
+              <p className="mt-1 text-blue-100 text-sm">{f.desc}</p>
+            </div>
+          ))}
         </div>
+      </div>
 
-        {/* Soft gradient fade into page background */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-gray-50" />
+      {/* Soft gradient fade into page background */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-gray-50" />
     </section>
   );
 }
