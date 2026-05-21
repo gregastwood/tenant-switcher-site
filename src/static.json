@@ -1,0 +1,26 @@
+{
+    "redirects": [
+        {
+            "source": "/downloads/tenant-switcher.msi",
+            "destination": "/downloads/Tenant%20Switcher.msi",
+            "type": 301
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/",
+            "destination": "/index.html"
+        }
+    ],
+    "headers": [
+        {
+            "source": "/404.html",
+            "headers": [
+                {
+                    "key": "X-Robots-Tag",
+                    "value": "noindex"
+                }
+            ]
+        }
+    ]
+}
