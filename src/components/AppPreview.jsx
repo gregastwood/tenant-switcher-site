@@ -11,7 +11,7 @@ export default function AppPreview() {
         <h2 className="text-4xl font-bold mb-4 text-gray-900">
           Explore Tenant Switcher in Action
         </h2>
-        <p className="text-gray-600 mb-10 max-w-2xl mx-auto">
+        <p className="text-gray-600 mb-4 max-w-2xl mx-auto">
           The Tenant Switcher dashboard gives MSPs and Microsoft 365 admins one place to manage client tenants, launch admin portals, and keep browser sessions separated by tenant.
         </p>
 
@@ -21,7 +21,7 @@ export default function AppPreview() {
             alt="Tenant Switcher App Preview"
             className="rounded-2xl shadow-2xl border border-gray-200 object-contain"
             style={{
-              maxHeight: "60vh", // 👈 keeps image fully visible on most screens
+              maxHeight: "70vh", // 👈 keeps image fully visible on most screens
               width: "auto",
             }}
           />
