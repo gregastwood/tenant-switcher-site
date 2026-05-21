@@ -54,9 +54,9 @@ export default function Hero() {
         {/* Title */}
         <h1 className="text-3xl sm:text-5xl font-bold mb-1">
           Microsoft 365 Tenant Switcher
-            <br />
+          <br />
           for MSPs and IT Admins
-          </h1>
+        </h1>
         <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-8">
           Switch between Microsoft 365, Intune, Entra ID, Exchange, SharePoint, Teams and Azure tenants without browser profile chaos. Tenant Switcher keeps client sessions organised, isolated and ready from your Windows tray.
         </p>
@@ -82,22 +82,17 @@ export default function Hero() {
         </p>
 
         {/* Why IT Pros Love It */}
-        <div className="max-w-6xl mx-auto mt-6 grid gap-6 md:grid-cols-3">
-          {features.map((f, i) => (
-            <div
-              key={i}
-              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:scale-105 hover:shadow-xl transition"
-            >
-              <i className={`ph ${f.icon} text-4xl text-white`} />
-              <h3 className="mt-3 text-lg font-semibold text-white">{f.title}</h3>
-              <p className="mt-2 text-blue-100 text-sm">{f.desc}</p>
-            </div>
-          ))}
+        <div
+          key={i}
+          className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-5 py-4 hover:scale-105 hover:shadow-xl transition"
+        >
+          <i className={`ph ${f.icon} text-3xl text-white`} />
+          <h3 className="mt-2 text-lg font-semibold text-white">{f.title}</h3>
+          <p className="mt-1 text-blue-100 text-sm">{f.desc}</p>
         </div>
-      </div>
 
-      {/* Soft gradient fade into page background */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-gray-50" />
+        {/* Soft gradient fade into page background */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-gray-50" />
     </section>
   );
 }
