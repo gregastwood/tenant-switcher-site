@@ -5,10 +5,10 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tenant-switcher.com/terms</loc>
+    <loc>https://tenant-switcher.com/terms.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://tenant-switcher.com/privacy</loc>
+    <loc>https://tenant-switcher.com/privacy.html</loc>
     <priority>0.6</priority>
 </urlset>
