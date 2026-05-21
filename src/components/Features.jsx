@@ -4,17 +4,17 @@ export default function Features() {
   const features = [
     {
       title: "Launch Microsoft 365 Portals Instantly",
-      desc: "Open Admin, SharePoint, Teams, Outlook, and more with one click — directly under the correct tenant.",
+      desc: "Open Microsoft 365 Admin Center, Intune, Entra ID, Exchange, SharePoint, Teams, Outlook and Azure directly in the correct tenant profile.",
       img: "/launchers.jpg",
     },
     {
-      title: "Manage Tenants Easily",
-      desc: "View all your tenants in one dashboard with color-coded shortcuts and last login tracking.",
+      title: "Manage tenants in one dashboard",
+      desc: "Keep client tenants organised with names, colours, shortcuts and last-used tracking, so MSP techs can find the right customer environment quickly.",
       img: "/tenants-view.jpg",
     },
     {
-      title: "Monitor Domain Health & Tray Access",
-      desc: "Keep an eye on DNS, authentication, and service connectivity — and switch tenants instantly from your system tray.",
+      title: "Monitor tenant health and switch from the tray",
+      desc: "Check tenant domain status, DNS/authentication indicators and jump back into the right Microsoft admin portal from the Windows system tray.",
       imgs: ["/domain-health.jpg", "/tray.jpg"],
     },
   ];
