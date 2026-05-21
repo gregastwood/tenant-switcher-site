@@ -54,6 +54,7 @@ export default function Hero() {
         {/* Title */}
         <h1 className="text-3xl sm:text-5xl font-bold mb-1">
           Microsoft 365 Tenant Switcher
+            <br />
           for MSPs and IT Admins
           </h1>
         <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-8">
@@ -66,13 +67,13 @@ export default function Hero() {
             onClick={handleDownload}
             className="bg-white text-blue-700 font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-blue-50 transition"
           >
-            Download Tenant Switcher
+            Download free version
           </button>
           <a
             href="#pricing"
             className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md transition"
           >
-            Buy Now
+            See pricing
           </a>
         </div>
 
