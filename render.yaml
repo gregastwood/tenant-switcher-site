@@ -1,0 +1,52 @@
+services:
+  - type: web
+    name: tenant-switcher-site
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    headers:
+      # Long-term caching for fingerprinted static assets only.
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+
+      # Keep HTML entry points and downloadable files fresh on every request.
+      - path: /
+        name: Cache-Control
+        value: no-cache
+
+      - path: /index.html
+        name: Cache-Control
+        value: no-cache
+
+      - path: /*.html
+        name: Cache-Control
+        value: no-cache
+
+      - path: /downloads/*
+        name: Cache-Control
+        value: no-cache
+
+      # Core browser security headers applied across the site.
+      - path: /*
+        name: Strict-Transport-Security
+        value: max-age=31536000; includeSubDomains; preload
+
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+
+      - path: /*
+        name: Permissions-Policy
+        value: camera=(), microphone=(), geolocation=(), payment=()
+
+      # Report-only CSP keeps monitoring active without blocking Stripe Checkout or Google Analytics.
+      - path: /*
+        name: Content-Security-Policy-Report-Only
+        value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://js.stripe.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://api.stripe.com https://m.stripe.network https://q.stripe.com https://r.stripe.com; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline'; frame-src https://js.stripe.com https://checkout.stripe.com https://hooks.stripe.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://checkout.stripe.com; object-src 'none'; upgrade-insecure-requests"
+
+        
