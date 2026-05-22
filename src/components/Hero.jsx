@@ -22,7 +22,7 @@ export default function Hero() {
   // ✅ MOD: download handler (replaces direct link)
   const handleDownload = async () => {
     const agree = window.confirm(
-      "By downloading Tenant Switcher, you agree to our Terms of Use and Privacy Policy."
+      "By downloading Tenant Switcher, you agree to our Terms of Use and Privacy Policy. \n\nTenant Switcher is a new Windows app and the installer is not yet code-signed, so Windows may show an “isn’t commonly downloaded” SmartScreen warning. This is expected for new unsigned installers."
     );
     if (!agree) return;
 
