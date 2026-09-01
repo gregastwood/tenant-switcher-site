@@ -26,13 +26,24 @@ export default function Pricing() {
         }),
       });
 
+
       const data = await res.json();
+
+      if (data.existingSubscription) {
+        alert(
+          "You already have an active Tenant Switcher subscription.\n\n" +
+          "To add or remove licences, open Tenant Switcher, go to License, " +
+          "and select Manage Subscription."
+        );
+        return;
+      }
+
       if (data.url) {
         window.location.href = data.url;
       } else {
-        // 🧹 SANITIZE: avoid revealing API responses
         alert("⚠️ Unable to start checkout. Please try again shortly.");
       }
+
     } catch {
       // 🧹 SANITIZE: remove raw error logging
       alert("⚠️ We couldn’t reach the payment system. Please try again.");
